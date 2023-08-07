@@ -1,0 +1,56 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row mt-5">
+  <div class="col-6 offset-1 mt-5 d-inline-block">
+    <div
+      id="map"
+      style="position: absolute; right: 80px; width: 500px; height: 270px"
+    ></div>
+    <div class="card mb-3">
+      <img src="<%= doctor.image%>" class="card-img-top" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">
+          <span><%= doctor.firstname %> </span
+          ><span> <%= doctor.lastname %></span>
+        </h5>
+        <p class="card-test"><%= doctor.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-muted"><%= doctor.location %></li>
+      </ul>
+      <div class="card-body">
+        <a
+          class="card-link btn btn-primary"
+          href="/doctors/<%= doctor._id %>/edit"
+          >Edit Detail</a
+        >
+        <form
+          class="d-inline"
+          action="/doctors/<%=doctor._id%>?_method=DELETE"
+          method="POST"
+        >
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+        <a
+          class="btn btn-sm btn-outline-success"
+          style="
+            --bs-btn-padding-y: 0.25rem;
+            --bs-btn-padding-x: 0.5rem;
+            --bs-btn-font-size: 0.75rem;
+          "
+          href="/doctors"
+          >All Doctors</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const mapToken = "<%- process.env.MAPBOX_TOKEN%>";
+  const doctor = <%- JSON.stringify(doctor)%>
+</script>
+
+<script src="/js/showPageMap.js"></script>

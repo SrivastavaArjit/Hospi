@@ -1,0 +1,58 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row mt-5">
+  <h1 class="text-center">New Doctor</h1>
+  <div class="col-6 offset-3">
+    <form action="/doctors" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="firstname">Firstname</label>
+        <input
+          class="form-control"
+          type="text"
+          id="firstname"
+          name="doctor[firstname]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="lastname">Lastname</label>
+        <input
+          class="form-control"
+          type="text"
+          id="lastname"
+          name="doctor[lastname]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="doctor[location]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="specialization">Image URL</label>
+        <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="doctor[image]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="specialization">Specialization</label>
+        <input
+          class="form-control"
+          type="text"
+          id="specialization"
+          name="doctor[specialization]"
+        />
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add doctor</button>
+      </div>
+    </form>
+    <a href="/doctors">All Doctors</a>
+  </div>
+</div>

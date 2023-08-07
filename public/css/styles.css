@@ -1,0 +1,87 @@
+:root {
+  --green: #16a085;
+  --black: #444;
+  --light-color: #777;
+  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 0.2rem solid var(--green);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  /* font-size: 20px; */
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+
+html {
+  font-size: 75%;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.navbar .logo i {
+  font-size: 2rem;
+  color: var(--green);
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  /* margin-right: 0.1rem;   */
+}
+
+.navbar a:hover {
+  color: var(--green);
+}
+
+.container-fluid {
+  box-shadow: 0px 4px 10px rgb(22, 160, 133, 0.2);
+}
+
+.container-fluid > .navbar-brand {
+  font-family: "Fredoka One", cursive;
+  font-size: 2rem;
+}
+
+.scroll .box-container .box button {
+  position: fixed;
+  text-decoration: none;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 50%;
+  border: var(--border);
+}
+
+.scroll .box-container .box button:hover {
+  background: #fff;
+  color: var(--green);
+}
+
+.footer .credit {
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--light-color);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .credit span {
+  color: var(--green);
+}
